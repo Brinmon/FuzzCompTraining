@@ -6,13 +6,13 @@
 
 在使用 AFL++ 进行 fuzzing 时，我们首先需要对程序进行插桩编译。以下是步骤：
 
-![插桩编译步骤](D:\githubproject\FuzzCompTraining\Exercise_01\QQ_1721895371630.png)
+![插桩编译步骤](QQ_1721895371630.png)
 
-![编译过程](D:\githubproject\FuzzCompTraining\Exercise_01\QQ_1721895453451.png)
+![编译过程](QQ_1721895453451.png)
 
 插桩编译完成：
 
-![插桩完成](D:\githubproject\FuzzCompTraining\Exercise_01\QQ_1721895527891.png)
+![插桩完成](QQ_1721895527891.png)
 
 ### 测试插桩编译
 
@@ -24,7 +24,7 @@
 
 测试结果表明，成功复现了 CVE，程序发生崩溃：
 
-![CVE复现](D:\githubproject\FuzzCompTraining\Exercise_01\QQ_1721895668594.png)
+![CVE复现](QQ_1721895668594.png)
 
 ### 正常编译不插桩
 
@@ -34,7 +34,7 @@
 [AFL++ docker-desktop] /home/GithubProject/openjpeg_fuzz/openjpeg/openjpeg/build_normal # printenv
 ```
 
-![环境变量](D:\githubproject\FuzzCompTraining\Exercise_01\QQ_1721896096947.png)
+![环境变量](QQ_1721896096947.png)
 
 #### 手动解决环境变量问题
 
@@ -50,7 +50,7 @@ export CFLAGS="-O0 -g"
 export CXXFLAGS="-O0 -g"
 ```
 
-![环境变量设置](D:\githubproject\FuzzCompTraining\Exercise_01\QQ_1721896222523.png)
+![环境变量设置](QQ_1721896222523.png)
 
 ### 测试正常编译
 
@@ -63,7 +63,7 @@ export CXXFLAGS="-O0 -g"
 
 结果显示，程序正常运行，没有发生崩溃：
 
-![ASAN模式](D:\githubproject\FuzzCompTraining\Exercise_01\QQ_1721896409204.png)
+![ASAN模式](QQ_1721896409204.png)
 
 ### 总结
 
